@@ -1,0 +1,17 @@
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+
+# Build directories
+target/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+
+
+# --- OS específicos ---
+.DS_Store
+Thumbs.db
