@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
 
 Profesor "1" --* "1....n" Grupo
@@ -35,6 +36,6 @@ Profesor "1" --* "1....n" Grupo
         - String: tipo
         - String: sistema
     }
-    
+    ```
 
     
