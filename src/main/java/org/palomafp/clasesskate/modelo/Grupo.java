@@ -1,18 +1,18 @@
 package org.palomafp.clasesskate.modelo;
 import java.util.ArrayList;
-import java.util.Date;
+
 import java.util.List;
 
 public class Grupo {
     private int codGrupo;
     private String lugar;
-    private Date horario;
+    private String horario;
     private String nivel;
     private Profesor profesor;
     private List<Alumno> alumnos;
     private List<Skate> skates;
 
-    public Grupo(int codGrupo, String lugar, Date horario, String nivel) {
+    public Grupo(int codGrupo, String lugar, String horario, String nivel) {
         this.codGrupo = codGrupo;
         this.lugar = lugar;
         this.horario = horario;
@@ -38,11 +38,11 @@ public class Grupo {
         this.lugar = lugar;
     }
 
-    public Date getHorario() {
+    public String getHorario() {
         return horario;
     }
 
-    public void setHorario(Date horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
 
