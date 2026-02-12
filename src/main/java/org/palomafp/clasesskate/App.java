@@ -11,8 +11,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        SkateDAO skateDAO = new SkateDAO();
-        Grupo grupo = skateDAO.obtenerGrupo();
+        GruposDAO gruposDAO = new GruposDAO();
+        Grupo grupo = gruposDAO.getGrupoRandom();
        System.out.println(grupo);
 
 }

@@ -2,7 +2,6 @@ package org.palomafp.clasesskate;
 
 import org.junit.jupiter.api.Test;
 public class SkateDaoTest {
-
 @Test
 public void testObtenerGrupo() {
     SkateDAO skateDAO = new SkateDAO();

@@ -12,11 +12,12 @@ public class Grupo {
     private List<Alumno> alumnos;
     private List<Skate> skates;
 
-    public Grupo(int codGrupo, String lugar, String horario, String nivel) {
+    public Grupo(int codGrupo, String lugar, String horario, String nivel, Profesor profesor) {
         this.codGrupo = codGrupo;
         this.lugar = lugar;
         this.horario = horario;
         this.nivel = nivel;
+        this.profesor = profesor;
         this.alumnos = new ArrayList<>();
         this.skates = new ArrayList<>();
     }
