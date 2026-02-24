@@ -105,17 +105,20 @@ public class GruposDAO {
     }
 
     public Grupo getGrupoRandom() {
-        if (grupos.isEmpty()) return null;
-         Random rd = new Random();
-        int indiceAleatorio = rd.nextInt(grupos.size());
-     return grupos.get(indiceAleatorio);
+       if (grupos.size() == 0) {
+        return null;
+    }
+    Random aleatorio = new Random();
+    int numgr = aleatorio.nextInt(grupos.size());
+    return grupos.get(numgr);
+    
     }
 
     public Grupo getGrupoByCodigo(int codigo) {
        for (int i = 0; i < grupos.size(); i++) {
-        Grupo g = grupos.get(i);
-        if (g.getCodGrupo() == codigo) {
-            return g;   
+        Grupo grupo = grupos.get(i);
+        if (grupo.getCodGrupo() == codigo) {
+            return grupo;   
 
         }   
     }   
