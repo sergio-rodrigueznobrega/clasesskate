@@ -13,9 +13,18 @@ public class App
     {
         GruposDAO gruposDAO = new GruposDAO();
         Grupo grupo = gruposDAO.getGrupoRandom();
-       System.out.println(grupo);
+       System.out.println("Grupo aleatorio: " + grupo);
+       Grupo grupoBuscado = gruposDAO.getGrupoByCodigo(4);
+    if(grupoBuscado != null) {
+        System.out.println("El grupo que buscas está en la pista: " + grupoBuscado.getLugar());
+        System.out.println("El profesor del grupo es: " + grupoBuscado.getProfesor().getNombre());
+        System.out.println("El horario del grupo es: " + grupoBuscado.getHorario());
 
+}else {
+    System.out.println("No se ha encontrado el grupo con el código especificado.");
 }
+    System.out.println("Total de grupos Encontrados: " + gruposDAO.getAllGrupos().size()); 
+    }
 
 }
 
