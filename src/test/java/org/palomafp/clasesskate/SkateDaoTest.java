@@ -14,6 +14,11 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 public class SkateDaoTest {
      GruposDAO dao = new GruposDAO();
+     @Test
+void testGetGrupoRandomListaVacia() {
+    dao.getAllGrupos().clear();
+    assertNull(dao.getGrupoRandom());
+}
     @Test
     void testGetAllGrupos() {
         ArrayList<Grupo> lista = dao.getAllGrupos();
@@ -45,5 +50,6 @@ public class SkateDaoTest {
         assertNotNull(grupoAleatorio);
         assertTrue(grupoAleatorio.getCodGrupo() >= 1 && grupoAleatorio.getCodGrupo() <= 4);
     }
+   
     
 }
