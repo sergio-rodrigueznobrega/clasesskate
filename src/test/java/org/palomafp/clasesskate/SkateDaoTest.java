@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 public class SkateDaoTest {
      GruposDAO dao = new GruposDAO();
      @Test
-void testGetGrupoRandomListaVacia() {
+void testGetGrupoRandomNulo() {
     dao.getAllGrupos().clear();
     assertNull(dao.getGrupoRandom());
 }
