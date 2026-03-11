@@ -3,7 +3,7 @@ package org.palomafp.clasesskate;
 
 import org.palomafp.clasesskate.modelo.Grupo;
 
-public class App 
+public class SkateDao 
 {
     public static void main( String[] args )
     {
