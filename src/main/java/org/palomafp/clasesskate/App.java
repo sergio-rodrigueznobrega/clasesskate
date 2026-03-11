@@ -16,7 +16,7 @@ public class App
             System.out.println("1. Obtener grupo aleatorio");
             System.out.println("2. Buscar grupo por código");
             System.out.println("3. Ver total de grupos");
-            System.out.println("0. Salir");
+            System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
 
@@ -26,7 +26,9 @@ public class App
                     System.out.println("El grupo aleaorio generado es: " + grupo);
                     break;
                 case 2:
-                     Grupo grupoBuscado = gruposDAO.getGrupoByCodigo(2);
+                    System.out.println("Introduce el código del grupo");
+                    int codigo = sc.nextInt();
+                     Grupo grupoBuscado = gruposDAO.getGrupoByCodigo(codigo);
                     if(grupoBuscado != null) {
                     System.out.println("El grupo que buscas está en la pista: " + grupoBuscado.getLugar());
                     System.out.println("El profesor del grupo es: " + grupoBuscado.getProfesor().getNombre());
@@ -42,7 +44,8 @@ public class App
                 default:
                     System.out.println("Opción no valida, inténtalo de nuevo");
             }
-        }
+        }while (opcion != 0);
+        sc.close();
 
       
     
