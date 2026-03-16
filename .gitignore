@@ -5,8 +5,9 @@
 *.jar
 
 # Build directories
-target/
+target/*
 !target/site/
+target/site/*
 !target/site/apidocs/
 # VS Code
 .vscode/*

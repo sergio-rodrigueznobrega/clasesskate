@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"org.palomafp.clasesskate"},{"l":"org.palomafp.clasesskate.modelo"}];updateSearchResults();
