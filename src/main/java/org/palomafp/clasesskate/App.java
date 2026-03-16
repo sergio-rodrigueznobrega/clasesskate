@@ -4,13 +4,26 @@ package org.palomafp.clasesskate;
 import java.util.Scanner;
 
 import org.palomafp.clasesskate.modelo.Grupo;
-
+/**
+ * Clase principal que ejecuta la aplicación
+ * @author Sergio y Débora
+ */
 public class App 
 {
-    public static void main( String[] args ) {
+    /**
+     * Método principal que ejecuta la aplicación 
+     * @param args Argumentos
+     */
+    public static void main( String[] args ) { 
+        /**
+         * Se crea Scanner para introducir datos por consola y se crea un objeto GruposDAO para acceder a los grupos de la escuela de skate
+         */
         Scanner sc = new Scanner(System.in);
         GruposDAO gruposDAO = new GruposDAO();
         int opcion;
+        /**
+         * Se muestra un menú con distintas opciones
+         */
         do{
             System.out.println("Menú grupos Skate");
             System.out.println("1. Obtener grupo aleatorio");
@@ -19,7 +32,9 @@ public class App
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
             opcion = sc.nextInt();
-
+            /**
+             * Se ejecuta la opción elegida por el usuario
+             */
             switch (opcion){
                 case 1:
                     Grupo grupo = gruposDAO.getGrupoRandom();

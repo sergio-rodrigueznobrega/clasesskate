@@ -6,11 +6,18 @@ import org.palomafp.clasesskate.modelo.Alumno;
 import org.palomafp.clasesskate.modelo.Grupo;
 import org.palomafp.clasesskate.modelo.Profesor;
 import org.palomafp.clasesskate.modelo.Skate;
-
+/**
+ * Clase que representa todos los grupos
+ * @author Sergio y Débora
+ */
 public class GruposDAO {
-
+    /**
+     * Lista de grupos
+     */
     ArrayList<Grupo> grupos = null;
-
+    /**
+     * Constructor de la clase GruposDAO
+     */
     public GruposDAO() {
         //Crear lista de grupos vacía
         grupos = new ArrayList<>();
@@ -103,7 +110,10 @@ public class GruposDAO {
         grupos.add(grupo3);
         grupos.add(grupo4);
     }
-
+    /**
+     * Devuelve un grupo aleatorio
+     * @return Un grupo aleatorio
+     */
     public Grupo getGrupoRandom() {
        if (grupos.size() == 0) {
         return null;
@@ -113,7 +123,11 @@ public class GruposDAO {
     return grupos.get(numgr);
     
     }
-
+    /**
+     * Devuelve un grupo por su código
+     * @param codigo Código del grupo a buscar
+     * @return El grupo con el código especificado o null si no existe
+     */
     public Grupo getGrupoByCodigo(int codigo) {
        for (int i = 0; i < grupos.size(); i++) {
         Grupo grupo = grupos.get(i);
@@ -124,7 +138,10 @@ public class GruposDAO {
     }   
     return null;
     }   
-
+    /**
+     * Devuelve lista de grupos
+     * @return Lista de grupos
+     */
     public ArrayList<Grupo> getAllGrupos() {
         return grupos;
     }
